@@ -1,0 +1,11 @@
+syntax: glob
+SonaattiSetitWebApp/src/com/sonaattisetit/utils/DataStoreHelper.java
+SonaattiSetitWebApp/src/com/sonaattisetit/webapp/Menu.java
+SonaattiSetitWebApp/war/WEB-INF/appengine-generated/local_db.bin
+SonaattiSetitWebApp/war/WEB-INF/classes/META-INF/jdoconfig.xml
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/utils/DataStoreHelper.class
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/DownloadMenusTaskServlet.class
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/Menu.class
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/MenuParser$1.class
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/MenuParser.class
+SonaattiSetitWebApp/war/WEB-INF/classes/log4j.properties

@@ -24,6 +24,7 @@ public class DownloadMenusTaskServlet extends HttpServlet {
 			Iterator<Menu> iter = menus.iterator();
 			while(iter.hasNext()){
 				Menu menu = (Menu)iter.next();
+				//TODO tähän entityjen luonti
 				System.out.println(menu.getRestaurant()+": "+menu.getDishes().toString());
 			}
 		}

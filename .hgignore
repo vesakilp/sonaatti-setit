@@ -9,3 +9,5 @@ SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/Menu.class
 SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/MenuParser$1.class
 SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/MenuParser.class
 SonaattiSetitWebApp/war/WEB-INF/classes/log4j.properties
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/MenuParser$MenusFeedHandler.class
+SonaattiSetitWebApp/war/WEB-INF/classes/com/sonaattisetit/webapp/temp_parser.txt

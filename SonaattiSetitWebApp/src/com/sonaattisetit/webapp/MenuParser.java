@@ -58,7 +58,7 @@ public class MenuParser {
 		public void endElement(String uri, String localName, String qName) throws SAXException {
 			if(qName.toUpperCase().equals("ITEM")){
 				item = false;
-				this.menu.setDishes(dishes);
+				this.menu.setDishes(this.dishes);
 				this.menus.add(this.menu);
 			}
 			if(qName.toUpperCase().equals("TITLE")) title = false;

@@ -17,7 +17,7 @@ import com.google.appengine.api.datastore.Query;
 public class DownloadMenusTaskServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		/*MenuParser parser = new MenuParser();
+		MenuParser parser = new MenuParser();
 		parser.parseRss("http://www.sonaatti.fi/info/RSS_fin.php");
 		ArrayList<Menu> menus = parser.getMenus();
 		if(menus != null){
@@ -32,13 +32,13 @@ public class DownloadMenusTaskServlet extends HttpServlet {
 				dbMenu.setProperty("dishes", menu.getDishes());
 				datastore.put(dbMenu);
 				//TODO tähän entityjen luonti
-				System.out.println(menu.getRestaurant()+": "+menu.getDishes().toString());
+				//System.out.println(menu.getRestaurant()+": "+menu.getDishes().toString());
 			}
 		}
 		else{
 			//TODO jotakin virheilmoa jos ei ole saatavilla ruokalistoja, onko sit ohjelmavirhe vai eikö oikeesti oo ruokaa tarjolla eri käsittelyt
-		}*/
-		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		}
+		/*DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		Query q = new Query("Menu");
 		PreparedQuery pq = datastore.prepare(q);
 		for (Entity result : pq.asIterable()) {
@@ -47,6 +47,6 @@ public class DownloadMenusTaskServlet extends HttpServlet {
 			//menu.setDishes((ArrayList<String>)result.getProperty("restaurant"));
 			System.out.println(menu.getRestaurant());
 			//System.out.println(menu.getDishes().toString());
-		}
+		}*/
 	}
 }

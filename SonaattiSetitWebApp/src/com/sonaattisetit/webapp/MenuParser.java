@@ -43,9 +43,9 @@ public class MenuParser {
 		public void characters(char ch[], int start, int length) throws SAXException {
 			if(item && title){
 				//TODO ei voi parsettaa spaceen koska voi sis‰lt‰‰ tiedon p‰iv‰st‰ esim. lauantaina voi olla piato - maanantaina:
-				//parsetetaan kuitenkin kaksoispiste pois
+				//parsetetaan kaksoispisteeseen
 				String str = new String(ch, start, length);
-				String[] strArr = str.split("\\s+");
+				String[] strArr = str.split(":");
 				this.menu.setRestaurant(strArr[0].toLowerCase().trim());
 			}
 			if(item && description){

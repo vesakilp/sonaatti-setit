@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>SonaattiSetit</title>
+<link media="all" type="text/css" href="sonaattisetit.css" rel="stylesheet">
+<link rel="stylesheet" href="jquery.mobile-1.0a3.min.css" />
+
+<script type="text/javascript" src="phonegap-1.1.0.js"></script>
+<script src="jquery-1.7.min.js"></script>
+<script src="jquery.mobile-1.0a3.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		url: 'https://localhost:8888/getMenusAsJSON.jsp',
+		type: 'POST',
+		dataType: 'json',
+		success: function(menus){
+	    	$.each(menus, function(){
+	    		var restaurant = this.restaurant;
+	    		var dishes = this.dishes;
+	    		var li = '<li class="restaurant">'+restaurant+'<ul class="dishes">';
+	    		$.each(dishes, function(){
+	    			li += '<li>'+this+'</li>';
+	    		});
+	    		li += '</ul></li>';
+	    		$('#menus').append(li);
+	    	});	    
+	    	$('.restaurant').live('click',function(){
+	    		$(this).children().slideToggle();	
+	    	});
+	    	$('#menus').listview("destroy").listview();
+	  	}
+	});	
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="home"> 
+	<div data-role="header" data-position="fixed">
+		<h1>SonaattiSetit v2.0 Beta</h1>
+	</div>	
+	<div data-role="content"> 
+		<ul data-role="listview" id="menus"></ul> 
+	</div>
+</div>
+</body>
+</html>

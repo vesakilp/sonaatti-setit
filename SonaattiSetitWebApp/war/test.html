@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>SonaattiSetit</title>
+<link media="all" type="text/css" href="sonaattisetit.css" rel="stylesheet">
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var request = $.ajax({
+		url: 'http://localhost:8888/getMenusAsJSON.jsp',
+		type: 'POST',
+		dataType: 'json',
+		success: function(menus){
+	    	$.each(menus, function(){
+	    		var restaurant = this.restaurant;
+	    		var dishes = this.dishes;
+	    		var li = '<li class="restaurant">'+restaurant+'<ul class="dishes">';
+	    		$.each(dishes, function(){
+	    			li += '<li>'+this+'</li>';
+	    		});
+	    		li += '</ul></li>';
+	    		$('#menus').append(li);
+	    	});	    	
+	  	}
+	});
+	
+	$('.restaurant').live('click',function(){
+		$(this).children().slideToggle();	
+	});
+});
+</script>
+</head>
+<body>
+<ul id="menus">
+</ul>
+</body>
+</html>

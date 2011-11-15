@@ -14,8 +14,9 @@ $(document).ready(function(){
 	$.ajax({
 		url: 'https://localhost:8888/getMenusAsJSON.jsp',
 		type: 'POST',
-		dataType: 'json',
+		dataType: 'jsonp',
 		success: function(menus){
+	    	$('div [data-role=content]').html('success');
 	    	$.each(menus, function(){
 	    		var restaurant = this.restaurant;
 	    		var dishes = this.dishes;
@@ -30,8 +31,15 @@ $(document).ready(function(){
 	    		$(this).children().slideToggle();	
 	    	});
 	    	$('#menus').listview("destroy").listview();
+	  	},
+	  	success: function(menus){
+	  		$('div [data-role=content]').html('done');
+	  	},
+	  	error: function(menus){
+	  		$('div [data-role=content]').html('error');
 	  	}
-	});	
+	});
+	//$('div [data-role=content]').html('asdf');
 });
 </script>
 </head>

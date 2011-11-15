@@ -1,4 +1,4 @@
-<%@ taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>
+<%@taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:useBean id="menus" class="com.sonaattisetit.utils.MenusBean" scope="page"/>

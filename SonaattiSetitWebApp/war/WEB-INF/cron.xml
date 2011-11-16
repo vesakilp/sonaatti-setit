@@ -3,7 +3,7 @@
   <cron>
     <url>/admin/download_menus</url>
     <description>Download and parse menus in every ten minutes</description>
-    <schedule>every 10 minutes</schedule>
+    <schedule>every day 03:00</schedule>
     <timezone>Europe/Helsinki</timezone>
   </cron>
 </cronentries>
